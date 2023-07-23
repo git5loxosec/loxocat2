@@ -1,0 +1,16 @@
+sh
+/bin/sh
+bash
+/bin/bash
+cmd
+powershell
+pwsh
+ash
+bsh
+csh
+ksh
+zsh
+pdksh
+tcsh
+mksh
+dash

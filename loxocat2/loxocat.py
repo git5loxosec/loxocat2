@@ -3,6 +3,7 @@ from rich.console import Console
 from rich.table import Table
 import os
 
+from user_interactions import UserInteractions
 from inet_info import InetInfo
 from listener import Listener
 from shell_generator import ShellGenerator

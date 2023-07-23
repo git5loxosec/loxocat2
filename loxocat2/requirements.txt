@@ -1,5 +1,4 @@
 urllib3
-base64
 pyperclip
 colorama
 rich

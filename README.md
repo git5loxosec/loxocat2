@@ -1,7 +1,7 @@
 # loxocat2
 🐘 **Loxocat 2 Toolbox - Your Ultimate Hacking Companion!** 🐈
 
-![Loxocat](https://github.com/git5loxosec/loxocat2/loxocat.png)
+<img src="https://github.com/git5loxosec/loxocat2/loxocat.png">
 
 **Introduction:**
 Loxocat 2 is a cutting-edge hacking toolbox that empowers hackers with a diverse array of powerful tools and features. It's designed to facilitate undetectable netcat (ncat) oriented payloads, offering seamless integration with msfvenom payloads, and utilizes pwncat-cs as a listener handler for automatic privilege escalation upon establishing connections.

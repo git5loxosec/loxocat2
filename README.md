@@ -1,4 +1,4 @@
-# loxocat2
+# Loxocat 2
 🐘 **Loxocat 2 Toolbox - Your Ultimate Hacking Companion!** 🐈
 
 <img src="https://raw.githubusercontent.com/git5loxosec/loxocat2/master/loxocat.png">

@@ -41,6 +41,7 @@ source loxocat/bin/activate
 **Step 4 - Install Dependencies:**
 While within the virtual environment, install the required project dependencies listed in "requirements.txt":
 ```
+cd loxocat2
 pip install -r requirements.txt
 ```
 **setp 5 - Run Loxocat 2:**

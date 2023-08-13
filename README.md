@@ -22,7 +22,7 @@ Loxocat 2 is a cutting-edge hacking toolbox that empowers hackers with a diverse
 **Step 1 - Clone the Repository:**
 Begin by cloning the Loxocat 2 repository from GitHub:
 ```
-git clone https://github.com/your_username/loxocat2.git
+git clone https://github.com/git5loxosec/loxocat2.git
 ```
 
 **Step 2 - Set Up the Virtual Environment:**

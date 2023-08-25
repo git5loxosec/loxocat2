@@ -1,5 +1,0 @@
-urllib3
-paramiko
-pyperclip
-colorama
-rich

